@@ -21,7 +21,7 @@ Executing `run.sh` compiles, packages and runs the curator. It will then start w
 
 ## About the demo curator
 
-The demo curator is extremely simple. All code is in a single class: [DemoCuratorModule](src/main/java/nl/ulso/markdown_curator/demo/DemoCuratorModule.java). This class:
+The demo curator is extremely simple. All code is in a single class: [DemoCuratorModule](application/src/main/java/nl/ulso/markdown_curator/demo/DemoCuratorModule.java). This class:
 
 - Reads the environment variable `VAULT_PATH` and uses that as the path of the vault to monitor.
 - Extends the base `CuratorModule` by installing the `JournalModule`, as used in the demo vault.
