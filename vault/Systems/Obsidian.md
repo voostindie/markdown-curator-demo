@@ -11,6 +11,7 @@ I don't use [[Obsidian]] alone. I combine it with my own [[Markdown Curator]] to
 - **Calendar**: adds a calendar view, ideal for browsing daily notes.
 - **macOS Keyboard Navigation**: enables macOS-specific keys.
 - **Outliner**: work with lists like in Workflowy or RoamResearch.
+- **Periodic Notes**: create/manage and your daily, weekly and monthly notes.
 - **Quick Switcher++**: enhanced Quick Switcher.
 - **Vimrc Support**: auto-loads a startup file with Vim commands.
 
