@@ -1,15 +1,15 @@
 <!--query:toc-->
-- [[#Introduction]]
-- [[#Do's and don'ts]]
-    - [[#Do use version control]]
-    - [[#Do write notes in the daily log outline]]
-    - [[#Do clean up the daily log at the end of the day]]
-    - [[#Do use folders and don't use tags]]
-    - [[#Don't duplicate content manually]]
-    - [[#Do use front matter for metadata only]]
-    - [[#Don't maintain lists and tables manually]]
-    - [[#Do archive old material]]
-    - [[#Do use emojis in titles and sections]]
+- Introduction
+- Do's and don'ts
+    - Do use version control
+    - Do write notes in the daily log outline
+    - Do clean up the daily log at the end of the day
+    - Do use folders and don't use tags
+    - Don't duplicate content manually
+    - Do use front matter for metadata only
+    - Don't maintain lists and tables manually
+    - Do archive old material
+    - Do use emojis in titles and sections
 <!--/query-->
 
 ## Introduction
@@ -68,4 +68,3 @@ Before you know it you're duplicating content.
 
 
 ### Do use emojis in titles and sections
-
