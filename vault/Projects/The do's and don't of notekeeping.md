@@ -13,4 +13,4 @@ On the daily log I mention when I'm working on a project, and what I did. Becaus
     - Started writing [[The do's and don't of notekeeping]]. I'm keeping them all in the [[README]], for now. That's the first place people will look, I guess.
 
 (*1 result*)
-<!--/query-->
+<!--/query (4f69957a)-->

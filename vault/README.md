@@ -10,7 +10,7 @@
     - Don't maintain lists and tables manually
     - Do archive old material
     - Do use emojis in titles and sections
-<!--/query-->
+<!--/query (5b38ddb7)-->
 
 ## Introduction
 

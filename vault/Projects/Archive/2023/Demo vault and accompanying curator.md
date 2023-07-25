@@ -11,4 +11,4 @@ I want this because I like to talk about my notekeeping skills and tools, but I 
     - Started, finished and archived the [[Demo vault and accompanying curator]] project, for demoing purposes.
 
 (*1 result*)
-<!--/query-->
+<!--/query (a75b6628)-->
