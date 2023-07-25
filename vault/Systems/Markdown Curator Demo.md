@@ -10,4 +10,4 @@ The **Markdown Curator Demo** is a demo application on top of the [[Markdown Cur
     	- The [[Markdown Curator Demo]] knows where to look for the outline of daily notes, and knows what to ignore.
 
 (*2 results*)
-<!--/query (528fe5d8)-->
+<!--/query (5b37cf4d)-->

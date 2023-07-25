@@ -9,4 +9,4 @@ Vincent is the guy who coded the [[Markdown Curator]] and the [[Markdown Curator
     	- The [[Markdown Curator Demo]] knows where to look for the outline of daily notes, and knows what to ignore.
 
 (*1 result*)
-<!--/query (2a80f446)-->
+<!--/query (161be4fe)-->

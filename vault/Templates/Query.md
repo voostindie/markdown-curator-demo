@@ -11,4 +11,4 @@ Queries available in this vault are:
 - **toc**: Outputs a table of contents for the current document.
 
 Use the 'help' query to get more information on a specific query.
-<!--/query (7496e09b)-->
+<!--/query (e857573c)-->
