@@ -1,3 +1,7 @@
+---
+banner: "https://www.mediaedge.ca/assets/Uploads/dos-donts-social-media-execution.jpg"
+banner_y: 0.38354
+---
 ## Context
 
 As this is a demo vault that shows how I keep notes, it feels right to also document in this same vault the do's and don'ts that I follow.
@@ -12,5 +16,4 @@ On the daily log I mention when I'm working on a project, and what I did. Becaus
 - **[[2023-03-03]]**:
     - Started writing [[The do's and don't of notekeeping]]. I'm keeping them all in the [[README]], for now. That's the first place people will look, I guess.
 
-(*1 result*)
-<!--/query (30709cf5)-->
+<!--/query (854f1e07)-->

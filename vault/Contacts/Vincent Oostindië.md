@@ -1,3 +1,6 @@
+---
+banner: "https://avatars.githubusercontent.com/u/883979?v=4"
+---
 Vincent is the guy who coded the [[Markdown Curator]] and the [[Markdown Curator Demo]] and who authored this vault.
 
 ## Timeline
@@ -8,5 +11,4 @@ Vincent is the guy who coded the [[Markdown Curator]] and the [[Markdown Curator
     	- I have a nice structure for my daily notes: activities, on the agenda, and sometimes other stuff.
     	- The [[Markdown Curator Demo]] knows where to look for the outline of daily notes, and knows what to ignore.
 
-(*1 result*)
-<!--/query (161be4fe)-->
+<!--/query (bc5eb3a9)-->

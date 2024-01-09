@@ -10,7 +10,7 @@
     - Don't maintain lists and tables manually
     - Do archive old material
     - Do use emojis in titles and sections
-<!--/query (1136a053)-->
+<!--/query (b40fae48)-->
 
 ## Introduction
 
@@ -32,7 +32,7 @@ All content in a vault is plaintext. That's just perfect for a version control s
 
 ### Do write notes in the daily log outline
 
-[[Logseq]] taught me this. The rationale: thinking about where to put a certain piece of information before having written it is slow and error prone. You have to think about it. It's much easier to just open the daily log and start hacking away.
+[[Logseq]] taught me this. The rationale: thinking about where to put a certain piece of information before having written it is slow and error-prone. It's much easier to just open the daily log and start hacking away.
 
 **Tip**: Obsidian's built-in "Daily notes" plugin allows you to set up a keyboard shortcut to open today's note. Mine is `Ctrl` + `Cmd` + `T`.
 
