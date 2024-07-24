@@ -1,3 +1,9 @@
+<!--query:dayNav-->
+### Error
+
+Document is not a daily journal!
+<!--/query (9dee163a)-->
+
 ## 🏃 Activities
 
 - 
