@@ -9,7 +9,7 @@ This repository contains a demo vault and accompanying application. Its purpose 
 
 To be able to compile the [code in this project](application/), you need 3 things:
 
-1. An OpenJDK 20+ installation (I use [Azul Zulu](https://www.azul.com/downloads/?package=jdk))
+1. An OpenJDK 21+ installation (I use [Azul Zulu](https://www.azul.com/downloads/?package=jdk))
 2. [Apache Maven](https://maven.apache.org) 3.9+
 3. A local install of a snapshot of <https://github.com/voostindie/markdown-curator>
 
