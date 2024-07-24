@@ -1,2 +1,4 @@
-vault/.obsidian
-application/.idea
+vault/.obsidian/
+application/.idea/
+application/target/
+
