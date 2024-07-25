@@ -11,6 +11,19 @@ import org.slf4j.LoggerFactory;
 import java.nio.file.InvalidPathException;
 import java.nio.file.Path;
 
+/**
+ * Main module for the demo curator.
+ * <p/>
+ * Every curator includes at least the {@link CuratorModule}. That module requires a {@link Path}
+ * to be provided: the path to the vault on disk. With just that, the curator works. The amount
+ * of queries provided is limited however.
+ * <p/>
+ * By including the {@link JournalModule} also, this module needs to provide a
+ * {@link JournalSettings} also, to configure the journal.
+ * <p/>
+ * All the other methods in this curator are only present to correctly read the path to the vault
+ * from the environment.
+ */
 @Module(includes = {CuratorModule.class, JournalModule.class})
 abstract class DemoCuratorModule
 {
