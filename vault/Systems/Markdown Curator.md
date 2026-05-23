@@ -1,7 +1,4 @@
----
-banner: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fready.com.vn%2Fwp-content%2Fuploads%2F2021%2F05%2Fmarkdown.jpg&f=1&nofb=1&ipt=8891bd283594aa20ebea7a22ee0f94ebb1a0be6d9fcfb53c68c77d5edb596b26&ipo=images"
----
-The Markdown Curator is a "Java 21+ library/application framework for monitoring repositories of Markdown documents, running queries on them, and inserting the output back into the documents."
+The Markdown Curator is a "Java 25+ library/application framework for monitoring repositories of Markdown documents, running queries on them, and inserting the output back into the documents."
 
 The simplest explanation:
 
@@ -10,13 +7,12 @@ The simplest explanation:
 - The Markdown Curator detects changes to the content, runs all queries, and updates the query output accordingly.
 
 Here's a an example: a query that outputs a sorted list of all notes in the folder of this note, **Systems**:
-
 <!--query:list-->
 - [[Logseq]]
-- [[Markdown Curator Demo]]
 - [[Markdown Curator]]
+- [[Markdown Curator Demo]]
 - [[Obsidian]]
-<!--/query (eec7190f)-->
+<!--/query (73097d60)-->
 
 The result is what I call "dynamic content in static Markdown documents, without lock-in". What I mean by that:
 

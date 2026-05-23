@@ -1,7 +1,3 @@
----
-banner: "https://res.cloudinary.com/practicaldev/image/fetch/s--lfqRJ0WH--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3lhp7eoq3kmhs59evdml.jpg"
-banner_y: 0.88554
----
 [Logseq](https://logseq.com) is a great tool that (re-)taught me the power of the daily log. I don't use it myself however, because:
 
 - Its power is in the tool itself. It lists referenced notes, runs queries and does much more, but it's all dynamic. I prefer static, plaintext files that I can view and edit in any editor.

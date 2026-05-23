@@ -1,14 +1,18 @@
 <configuration>
-
     <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%d{HH:mm:ss.SSS} [%X{curator}] %msg%n</pattern>
+            <pattern>%d{HH:mm:ss.SSS}  %.-1level  %-4.4X{curator}  %msg%n</pattern>
         </encoder>
     </appender>
-
     <logger name="io.methvin.watcher" level="warn"/>
+    <logger name="nl.ulso" level="info"/>
+    <!--    <logger name="nl.ulso.curator" level="debug"/>-->
+    <!--    <logger name="nl.ulso.curator.change.DefaultChangeCollector" level="trace"/>-->
+    <!--    <logger name="nl.ulso.curator.addon.projectjournal.ProjectJournalAttributeValueProducer" level="trace"/>-->
+    <!--    <logger name="nl.ulso.curator.addon.project.ProjectAttributeValueFrontMatterWriter" level="trace"/>-->
+    <!--    <logger name="nl.ulso.curator.main.DefaultQueryOrchestrator" level="trace"/>-->
 
-    <root level="debug">
+    <root level="trace">
         <appender-ref ref="stdout"/>
     </root>
 </configuration>
