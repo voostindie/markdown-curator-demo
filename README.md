@@ -9,7 +9,7 @@ This repository contains a demo vault and accompanying application. Its purpose 
 
 To be able to compile the [code in this project](application/), you need 3 things:
 
-1. An OpenJDK 21+ installation (I use [Azul Zulu](https://www.azul.com/downloads/?package=jdk))
+1. An OpenJDK 25+ installation (I use [Azul Zulu](https://www.azul.com/downloads/?package=jdk))
 2. [Apache Maven](https://maven.apache.org) 3.9+
 3. A local install of a snapshot of <https://github.com/voostindie/markdown-curator>
 
@@ -21,7 +21,7 @@ Executing `run.sh` compiles, packages and runs the curator. It will then start w
 
 ## About the demo curator
 
-The demo curator is extremely simple. All code is in a single class: [DemoCuratorModule](application/src/main/java/nl/ulso/markdown_curator/demo/DemoCuratorModule.java). This class:
+The demo curator is extremely simple. All code is in a single class: [DemoCuratorModule](application/src/main/java/nl/ulso/curator/demo/DemoCuratorModule.java). This class:
 
 - Reads the environment variable `VAULT_PATH` and uses that as the path of the vault to monitor.
-- Extends the base `CuratorModule` by installing the `JournalModule`, as used in the demo vault.
+- Extends the base `CuratorModule` by installing several modules and configuring them.
