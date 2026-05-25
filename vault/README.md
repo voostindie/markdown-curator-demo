@@ -7,11 +7,12 @@
     - Do clean up the daily log at the end of the day
     - Do use folders and don't use tags
     - Don't duplicate content manually
-    - Do use front matter for metadata only
     - Don't maintain lists and tables manually
+    - Do use front matter for metadata only
     - Do use emojis in titles and sections
 - Available queries
-<!--/query (4c8055aa)-->
+- Timeline
+<!--/query (6b9f9047)-->
 ## Introduction
 
 This is the demo vault that accompanies the [[Markdown Curator Demo]] application. It's organized similarly to my own private vaults.
@@ -24,7 +25,7 @@ When you run the demo application next to this vault, it will monitor changes to
 
 ## How I manage projects from my journal
 
-Take a look at the [[Meta Project]]. You will see a lot of content, but all of it is embedded within `<!--query-->` HTML lines, just like the table of contents in this README. The project also has properties. Where do the content and the properties come from? It comes from the *journal*, which is configured with *markers*.
+Take a look at the [[Meta Project]]. You will see a lot of content, but all of it is embedded within `<!--query-->` HTML lines, just like the table of contents in this README. The project also has properties. Where do the content and the properties come from? They come from the *journal*, which is configured with *markers*.
 
 Now take a look at the journal for [[2026-05-23]]. Its *Activities* section contains an outline. That's how I log my days. (See the do's and don'ts below for why a daily log makes sense.) In that outline you see something like this:
 
@@ -58,12 +59,12 @@ The marker system is completely open. The vault itself defines which markers exi
 But that's not all. The [[Meta Project]] also has front matter properties like `lead`, `last_modified` and `status`. The values of these properties are all pulled from the journal:
 
 - The `last_modified` date is set to the most recent reference to the project.
-- The `status` property is set to one of the supported aliases of the most recent [[⭕️]]  marker. See that marker for an explanation.
+- The `status` property is set to one of the supported aliases of the most recent [[⭕️]] marker. See that marker for an explanation.
 - The `lead` property is set to one of the supported aliases of the most recent [[💁🏼]] marker. See that marker for an explanation.
 
 Again, this is an open system. You can configure it any way you like, in your own vault.
 
-Having all these markers in place, it's possible to generate nice overviews, like this one:
+Having all these markers in place, it's possible to generate overviews like this one:
 <!--query:projects format: table-->
 
 | Prio | Project                                | Lead                  | Last&nbsp;modified | Status |
@@ -76,8 +77,8 @@ The project [[The do's and don't of note-keeping]] doesn't have any markers in t
 
 The `Prio` column is also empty. There's two ways to fix that:
 
-1. Define it in the `priority` property of the project note.
-2. If you use [OmniFocus](https://www.omnigroup.com/omnifocus): enable the `OmniFocusModule` in the demo curator and pull the priorities from there. They sync up every 5 minutes.
+1. Define it in the `priority` property of the project note, in the front matter.
+2. If you use [OmniFocus](https://www.omnigroup.com/omnifocus): enable the `OmniFocusModule` in the demo curator and configure it. From then on priorities will be pulled from there, every 5 minutes.
 
 ## Do's and don'ts
 
@@ -97,6 +98,8 @@ All content in a vault is plain text. That's just perfect for a version control 
 
 **Tip 3**: The "Calendar" plugin is indispensable too.
 
+**Tip 4**: the `timeline` query from the [[Markdown Curator]] can generate a timeline of references to *any* document from the journal, newest to oldest, similar to [[Logseq]]. See the bottom of this README for an example.
+
 ### Do clean up the daily log at the end of the day
 
 If you write everything in the daily log outline, then you will end up logging some nuggets that you want to keep more front end center. Therefore, at the end of the day, have a look at the complete log for that day and refactor it by moving some information out of the log and into individual notes of projects, contacts, and so on. Or, alternatively, you can mark these nuggets, and then automatically have them pulled into separate sections using the `marked` query.
@@ -107,12 +110,17 @@ It's an age-old debate: should you use folders, tags, or both, to organize notes
 
 I've learned through trial and error that I need constraints, otherwise I make a mess of things. Too much flexibility makes me inconsistent because I can never remember my own system. It also makes me slow, because... I can never remember my own system. So I use a minimal amount of folders, and no tags. I use folders for two things:
 
-1. **For categorization**. These are the top-level folders like "Contacts", "Journal", "Projects" and "Systems".
-2. **For archiving**. Once a note has lost its relevancy, I move it into a subfolder "*YYYY*", where *YYYY* is the year. In practice this mostly applies to projects.
+1. **For categorization**. These are the top-level folders like "Contacts", "Journal", "Projects" and "Systems", like they are in this vault.
+2. **For archiving**. Once a note has lost its relevance, I move it into a subfolder "*YYYY*", where *YYYY* is the year. In practice this mostly applies to projects.
 
 ### Don't duplicate content manually
 
 If you copy-paste content, you can be sure of one thing: at some point you'll change one, and not the other. Therefore, minimize the amount of copying you do. I created the [[Markdown Curator]] for this purpose: it copies and pastes for you, and ensures the copy is always in sync.
+
+### Don't maintain lists and tables manually
+
+This is a specialization of [[#Don't duplicate content manually]]. Lists are much easier generated and kept up to date automatically than maintained by hand. Try the `toc`, `list` and `table` queries first. Or roll your own based on these.
+
 ### Do use front matter for metadata only
 
 Front matter (that YAML stuff at the top) is useful to store metadata, like tags and aliases, but once you start using it for more than metadata, you'll find yourself into a rabbit hole you can't get out of. 
@@ -121,11 +129,9 @@ Before you know it you're duplicating content.
 
 Instead of putting data in formats to help the system, pick a system that uses your format!
 
-Did you know that the [[Markdown Curator]] can generate front matter out of content? See the [[Meta Project]] for an example.
+The [[Markdown Curator]] can generate front matter out of content. See the [[Meta Project]] for an example. 
 
-### Don't maintain lists and tables manually
-
-This is a specialization of [[#Don't duplicate content manually]]. Lists are much easier generated and kept up to date automatically, than maintained by hand. Try the `toc`, `list` and `table` queries first. Or roll your own based on these.
+I do use properties because they support other tools (like [[Obsidian]]'s Bases), but I have [[Obsidian]] configured to hide them. They're almost always derived anyway.
 
 ### Do use emojis in titles and sections
 
@@ -138,7 +144,7 @@ Visuals are important. Using emojis in titles and sections is an easy way to spr
 
 ## Available queries
 
-Below is a reference to a non-existent query `name`, which means its output is replaced with an overview of all available queries:
+Below is a reference to a non-existent query `name`, which means its output is replaced with an overview of all available queries. Note that these are the queries available *for this vault*. Different curators can offer different sets of queries.
 
 <!--query:name-->
 ### Error
@@ -162,3 +168,19 @@ Queries available in this vault are:
 
 Use the 'help' query to get more information on a specific query.
 <!--/query (dabb5234)-->
+## Timeline
+
+Here are all the references to this README from the journal, in reverse chronological order:
+<!--query:timeline-->
+- **[[2026-05-25]]**:
+    - Minor updates to the [[README]].
+- **[[2026-05-23]]**:
+    - [[Markdown Curator Demo]]
+    	- Most importantly this includes the `ProjectJournal` module, which is explained in this vault in more detail. See the [[README]].
+- **[[2024-07-24]]**:
+    - [[The do's and don't of note-keeping]]
+    	- Wrote a couple more do's in the [[README]].
+- **[[2023-03-03]]**:
+    - I started writing [[The do's and don't of note-keeping]]. I'm keeping them all in the [[README]], for now. That's the first place people will look, I guess.
+
+<!--/query (e32f7ebc)-->

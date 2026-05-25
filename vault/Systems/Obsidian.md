@@ -1,8 +1,8 @@
 [Obsidian](https://obsidian.md) is "a powerful and extensible knowledge base that works on top of your local folder of plain text files."
 
-I've been using Obsidian since late 2020, and after 2+ years I say "amen" to the tagline. It works great for me! This is coming from someone who  strongly dislikes Electron-based applications in general. I have not yet found a suitable macOS-native, except maybe for [iA Writer](https://ia.net/writer). I like that app a lot and use it regularly, but in the end Obsidian is faster for me, thanks to its keyboard shortcuts and a couple of powerful plugins.
+I've been using Obsidian since late 2020, and after 2+ years I say "amen" to the tagline. It works great for me! This is coming from someone who  strongly dislikes Electron-based applications in general. I have not yet found a suitable macOS-native, except maybe for [iA Writer](https://ia.net/writer). I like that app a lot and use it regularly, but in the end Obsidian is faster for me for journaling and keeping project notes, thanks to its keyboard shortcuts and a couple of powerful plugins. I use iA Writer when I'm writing prose, like an article.
 
-I don't use [[Obsidian]] by itself. I combine it with my own [[Markdown Curator]] tool.
+I don't use [[Obsidian]] as is. I combine it with my own [[Markdown Curator]] tool and with a couple of plugins.
 
 ## Recommended plugins
 
@@ -13,7 +13,7 @@ I don't use [[Obsidian]] by itself. I combine it with my own [[Markdown Curator]
 - **Git**: adds version control.
 - **macOS Keyboard Navigation**: enables macOS-specific keys.
 - **Outliner**: work with lists like in Workflowy or RoamResearch.
-- **Periodic Notes**: create/manage and your daily, weekly and monthly notes.
+- **Periodic Notes**: create and manage your daily, weekly and monthly notes.
 
 Okay, I cheated. I use a few more. See the next section.
 
@@ -21,7 +21,7 @@ Okay, I cheated. I use a few more. See the next section.
 
 The default [[Obsidian]] theme is okay, but not great, in my opinion. Instead I use the **Minimal** theme. 
 
-As the text font in this vault I use **Proxima Nova**. and for monospace I use **JetBrains Mono**.
+As the text font in this vault I use **SF Pro** for normal text and **JetBrains Mono** for code.
 
 To further customize [[Obsidian]]'s look & feel I use 3 plugins:
 

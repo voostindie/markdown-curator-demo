@@ -1,7 +1,6 @@
 package nl.ulso.curator.demo;
 
-import nl.ulso.curator.Curator;
-import nl.ulso.curator.CuratorFactory;
+import nl.ulso.curator.*;
 
 /// This factory is the bridge to the curator application: by implementing the [CuratorFactory]
 /// interface and registering this interface in the
