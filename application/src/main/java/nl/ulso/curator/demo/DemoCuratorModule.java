@@ -33,7 +33,7 @@ import static org.slf4j.LoggerFactory.getLogger;
 /// from the environment.
 @Module(includes = {
     CuratorModule.class,
-    OmniFocusModule.class,
+//    OmniFocusModule.class,
     ProjectJournalModule.class
 })
 abstract class DemoCuratorModule
