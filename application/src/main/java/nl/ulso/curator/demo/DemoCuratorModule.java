@@ -20,7 +20,7 @@ import static org.slf4j.LoggerFactory.getLogger;
 /// Main module for the demo curator.
 ///
 /// Every curator includes at least the [CuratorModule]. That module requires a [Path] to be
-/// provided: the path to the vault on disk. With just that, the curator works. The amount of
+/// provided: the path to the vault on disk. With just that, the curator works. The number of
 /// queries provided is limited, however.
 ///
 /// By including the [ProjectJournalModule], this module needs to provide a [ProjectSettings] and a
