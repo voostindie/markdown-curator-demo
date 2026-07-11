@@ -157,6 +157,7 @@ Queries available in this vault are:
 - **list**: Generates a sorted list of pages in a folder.
 - **marked**: Generates an overview of the marked lines for the selected document, with entries extracted from the journal. Each marker gets its own section. The title of the section defaults to the name of the marker, but this can be overruled by setting the 'title' property of the marker document itself (if present). If a marker is not present for the selected document, the section is left out.
 - **period**: Generates an overview of notes referenced by daily notes in a certain period
+- **processorgraph**: Generates a Mermaid diagram of the internal change processor graph.
 - **projectlead**: Outputs all active projects lead by a specific contact.
 - **projects**: outputs all active projects
 - **statistics**: Generates statistics on the vault in YAML format.
@@ -167,7 +168,7 @@ Queries available in this vault are:
 - **weeknav**: Generates calendar navigation in the weekly journal
 
 Use the 'help' query to get more information on a specific query.
-<!--/query (dabb5234)-->
+<!--/query (6e618279)-->
 ## Timeline
 
 Here are all the references to this README from the journal, in reverse chronological order:
