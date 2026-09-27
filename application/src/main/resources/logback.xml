@@ -5,6 +5,7 @@
         </encoder>
     </appender>
     <logger name="io.methvin.watcher" level="warn"/>
+    <logger name="org.eclipse.jetty" level="warn"/>
     <logger name="nl.ulso" level="info"/>
     <!--    <logger name="nl.ulso.curator" level="debug"/>-->
     <!--    <logger name="nl.ulso.curator.change.DefaultChangeCollector" level="trace"/>-->

@@ -88,8 +88,8 @@ graph LR
     VaultReloader --> Reset
     Document --> VaultReloader
     VaultReloader@{ shape: subproc }
-    VaultInitializer --> Document
     VaultInitializer --> Folder
+    VaultInitializer --> Document
     Reset --> VaultInitializer
     VaultInitializer@{ shape: subproc }
     DailyProducer --> Daily
@@ -128,25 +128,25 @@ graph LR
     Project --> FrontMatterProjectAttributeValueProducer
     FrontMatterProjectAttributeValueProducer@{ shape: subproc }
     ProjectLastModifiedAttributeValueProducer --> ProjectAttributeValue
-    Project --> ProjectLastModifiedAttributeValueProducer
     Daily --> ProjectLastModifiedAttributeValueProducer
+    Project --> ProjectLastModifiedAttributeValueProducer
     ProjectLastModifiedAttributeValueProducer@{ shape: subproc }
     ProjectLeadAttributeValueProducer --> ProjectAttributeValue
-    ProjectLeadMarker --> ProjectLeadAttributeValueProducer
     Project --> ProjectLeadAttributeValueProducer
     Daily --> ProjectLeadAttributeValueProducer
+    ProjectLeadMarker --> ProjectLeadAttributeValueProducer
     ProjectLeadAttributeValueProducer@{ shape: subproc }
     ProjectStatusAttributeValueProducer --> ProjectAttributeValue
+    ProjectStatusMarker --> ProjectStatusAttributeValueProducer
     Project --> ProjectStatusAttributeValueProducer
     Daily --> ProjectStatusAttributeValueProducer
-    ProjectStatusMarker --> ProjectStatusAttributeValueProducer
     ProjectStatusAttributeValueProducer@{ shape: subproc }
     ProjectAttributeRepository --> ProjectAttributeRepositoryUpdate
-    Project --> ProjectAttributeRepository
     ProjectAttributeValue --> ProjectAttributeRepository
+    Project --> ProjectAttributeRepository
     ProjectAttributeRepository@{ shape: subproc }
-    ProjectAttributeRepositoryUpdate --> ProjectAttributeValueFrontMatterWriter
     ProjectAttributeValue --> ProjectAttributeValueFrontMatterWriter
+    ProjectAttributeRepositoryUpdate --> ProjectAttributeValueFrontMatterWriter
     ProjectAttributeValueFrontMatterWriter@{ shape: subproc }
 ```
-<!--/query (e33359d1)-->
+<!--/query (06529dc8)-->
