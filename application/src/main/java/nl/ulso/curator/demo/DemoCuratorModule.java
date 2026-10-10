@@ -5,7 +5,7 @@ import dagger.Provides;
 import jakarta.inject.Named;
 import nl.ulso.curator.CuratorModule;
 import nl.ulso.curator.addon.alfred.AlfredModule;
-import nl.ulso.curator.addon.alfred.AlfredSettings;
+import nl.ulso.curator.addon.alfred.ExternalLinksQuerySettings;
 import nl.ulso.curator.addon.journal.JournalSettings;
 import nl.ulso.curator.addon.omnifocus.OmniFocusModule;
 import nl.ulso.curator.addon.omnifocus.OmniFocusSettings;
@@ -15,6 +15,7 @@ import org.slf4j.Logger;
 
 import java.nio.file.InvalidPathException;
 import java.nio.file.Path;
+import java.util.Set;
 
 import static nl.ulso.curator.CuratorModule.WATCH_DOCUMENT_KEY;
 import static org.slf4j.LoggerFactory.getLogger;
@@ -35,9 +36,8 @@ import static org.slf4j.LoggerFactory.getLogger;
 /// from the environment.
 @Module(includes = {
     CuratorModule.class,
+    AlfredModule.class,
 //    OmniFocusModule.class,
-    ProjectJournalModule.class,
-    AlfredModule.class
 })
 abstract class DemoCuratorModule
 {
@@ -91,9 +91,9 @@ abstract class DemoCuratorModule
     }
 
     @Provides
-    static AlfredSettings alfredSettings()
+    static ExternalLinksQuerySettings provideExternalLinksQuerySettings()
     {
-        return new AlfredSettings(PROJECT_FOLDER);
+        return new ExternalLinksQuerySettings("Links", Set.of("🔗"));
     }
 
     private static String resolveVaultPathFromEnvironmentVariable()
