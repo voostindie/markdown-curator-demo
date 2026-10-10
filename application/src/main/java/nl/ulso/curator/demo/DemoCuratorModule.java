@@ -4,6 +4,8 @@ import dagger.Module;
 import dagger.Provides;
 import jakarta.inject.Named;
 import nl.ulso.curator.CuratorModule;
+import nl.ulso.curator.addon.alfred.AlfredModule;
+import nl.ulso.curator.addon.alfred.AlfredSettings;
 import nl.ulso.curator.addon.journal.JournalSettings;
 import nl.ulso.curator.addon.omnifocus.OmniFocusModule;
 import nl.ulso.curator.addon.omnifocus.OmniFocusSettings;
@@ -34,7 +36,8 @@ import static org.slf4j.LoggerFactory.getLogger;
 @Module(includes = {
     CuratorModule.class,
 //    OmniFocusModule.class,
-    ProjectJournalModule.class
+    ProjectJournalModule.class,
+    AlfredModule.class
 })
 abstract class DemoCuratorModule
 {
@@ -85,6 +88,12 @@ abstract class DemoCuratorModule
     static OmniFocusSettings omniFocusSettings()
     {
         return new OmniFocusSettings(OMNIFOCUS_FOLDER);
+    }
+
+    @Provides
+    static AlfredSettings alfredSettings()
+    {
+        return new AlfredSettings(PROJECT_FOLDER);
     }
 
     private static String resolveVaultPathFromEnvironmentVariable()

@@ -5,6 +5,7 @@ key: value
 
 Queries available in this vault are:
 
+- **alfred**: Output settings for the Alfred workflow
 - **daynav**: Generates calendar navigation in the daily journal
 - **help**: Shows detailed help information for a query.
 - **latestnav**: Generates a link to the latest journal entry
@@ -23,4 +24,4 @@ Queries available in this vault are:
 - **weeknav**: Generates calendar navigation in the weekly journal
 
 Use the 'help' query to get more information on a specific query.
-<!--/query (1d82eafc)-->
+<!--/query (de08d906)-->
