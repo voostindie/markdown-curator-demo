@@ -5,7 +5,6 @@ import dagger.Provides;
 import jakarta.inject.Named;
 import nl.ulso.curator.CuratorModule;
 import nl.ulso.curator.addon.alfred.AlfredModule;
-import nl.ulso.curator.addon.alfred.ExternalLinksQuerySettings;
 import nl.ulso.curator.addon.journal.JournalSettings;
 import nl.ulso.curator.addon.omnifocus.OmniFocusModule;
 import nl.ulso.curator.addon.omnifocus.OmniFocusSettings;
@@ -15,7 +14,6 @@ import org.slf4j.Logger;
 
 import java.nio.file.InvalidPathException;
 import java.nio.file.Path;
-import java.util.Set;
 
 import static nl.ulso.curator.CuratorModule.WATCH_DOCUMENT_KEY;
 import static org.slf4j.LoggerFactory.getLogger;
@@ -88,12 +86,6 @@ abstract class DemoCuratorModule
     static OmniFocusSettings omniFocusSettings()
     {
         return new OmniFocusSettings(OMNIFOCUS_FOLDER);
-    }
-
-    @Provides
-    static ExternalLinksQuerySettings provideExternalLinksQuerySettings()
-    {
-        return new ExternalLinksQuerySettings("Links", Set.of("🔗"));
     }
 
     private static String resolveVaultPathFromEnvironmentVariable()

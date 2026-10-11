@@ -88,8 +88,8 @@ graph LR
     VaultReloader --> Reset
     Document --> VaultReloader
     VaultReloader@{ shape: subproc }
-    VaultInitializer --> Folder
     VaultInitializer --> Document
+    VaultInitializer --> Folder
     Reset --> VaultInitializer
     VaultInitializer@{ shape: subproc }
     DailyProducer --> Daily
@@ -128,25 +128,25 @@ graph LR
     Project --> FrontMatterProjectAttributeValueProducer
     FrontMatterProjectAttributeValueProducer@{ shape: subproc }
     ProjectLastModifiedAttributeValueProducer --> ProjectAttributeValue
-    Daily --> ProjectLastModifiedAttributeValueProducer
     Project --> ProjectLastModifiedAttributeValueProducer
+    Daily --> ProjectLastModifiedAttributeValueProducer
     ProjectLastModifiedAttributeValueProducer@{ shape: subproc }
     ProjectLeadAttributeValueProducer --> ProjectAttributeValue
-    Daily --> ProjectLeadAttributeValueProducer
     ProjectLeadMarker --> ProjectLeadAttributeValueProducer
+    Daily --> ProjectLeadAttributeValueProducer
     Project --> ProjectLeadAttributeValueProducer
     ProjectLeadAttributeValueProducer@{ shape: subproc }
     ProjectStatusAttributeValueProducer --> ProjectAttributeValue
     Daily --> ProjectStatusAttributeValueProducer
-    Project --> ProjectStatusAttributeValueProducer
     ProjectStatusMarker --> ProjectStatusAttributeValueProducer
+    Project --> ProjectStatusAttributeValueProducer
     ProjectStatusAttributeValueProducer@{ shape: subproc }
     ProjectAttributeRepository --> ProjectAttributeRepositoryUpdate
-    ProjectAttributeValue --> ProjectAttributeRepository
     Project --> ProjectAttributeRepository
+    ProjectAttributeValue --> ProjectAttributeRepository
     ProjectAttributeRepository@{ shape: subproc }
-    ProjectAttributeValue --> ProjectAttributeValueFrontMatterWriter
     ProjectAttributeRepositoryUpdate --> ProjectAttributeValueFrontMatterWriter
+    ProjectAttributeValue --> ProjectAttributeValueFrontMatterWriter
     ProjectAttributeValueFrontMatterWriter@{ shape: subproc }
 ```
-<!--/query (7608a6a2)-->
+<!--/query (2b85ba93)-->

@@ -86,11 +86,11 @@ Here are the guidelines I follow when writing notes.
 
 ### Do use version control
 
-All content in a vault is plain text. That's just perfect for a version control system like Git. I cannot recommend using it enough, especially when a separate tool like the [[Markdown Curator]] is monitoring and updating files in the vault in the background. In the odd case that it messes up the content, all you need to do is revert local changes.
+All content in a vault is plain text. That's just perfect for a version control system like Git. I cannot recommend using it enough, especially when a separate tool like the [[Markdown Curator]] is monitoring and updating files in the vault in the background. In the odd case that it messes up the content — I swear this hasn't happened to me in years — all you need to do is revert local changes.
 
 ### Do write notes in the daily log outline
 
-[[Logseq]] taught me this. The rationale: thinking about where to put a certain piece of information before having written it is slow and error-prone. It's much easier to just open the daily log and start hacking away.
+[[Logseq]] taught me this. The rationale: thinking about where to put a certain piece of information before having written it is slow and error-prone. It's much easier to just open the daily log and start typing.
 
 **Tip 1**: Obsidian's built-in "Daily notes" plugin allows you to set up a keyboard shortcut to open today's note. Mine is `Ctrl` + `Cmd` + `T`.
 
@@ -138,7 +138,7 @@ I do use properties because they support other tools (like [[Obsidian]]'s Bases)
 Visuals are important. Using emojis in titles and sections is an easy way to spruce up your content and make it easily recognizable. In my case:
 
 - I prefix titles with one of a small subset of emojis to categorize projects, teams and so on.
-- I prefix sections for often-used sections - timeline, log, context, contacts, and so on - with fixed emojis, to make them easier to spot.
+- I prefix often-used sections - timeline, log, context, contacts, and so on - with fixed emojis, to make them easier to spot.
 
 (I did not do that in this demo vault on purpose. I don't want to scare people off.)
 
@@ -155,6 +155,7 @@ Queries available in this vault are:
 - **daynav**: Generates calendar navigation in the daily journal
 - **help**: Shows detailed help information for a query.
 - **latestnav**: Generates a link to the latest journal entry
+- **links**: Gathers all external links for a document, for use in the HTTP server only.
 - **list**: Generates a sorted list of pages in a folder.
 - **ls**: Lists folder content
 - **marked**: Generates an overview of the marked lines for the selected document, with entries extracted from the journal. Each marker gets its own section. The title of the section defaults to the name of the marker, but this can be overruled by setting the 'title' property of the marker document itself (if present). If a marker is not present for the selected document, the section is left out.
@@ -170,7 +171,7 @@ Queries available in this vault are:
 - **weeknav**: Generates calendar navigation in the weekly journal
 
 Use the 'help' query to get more information on a specific query.
-<!--/query (de08d906)-->
+<!--/query (25b2f22e)-->
 ## Timeline
 
 Here are all the references to this README from the journal, in reverse chronological order:
