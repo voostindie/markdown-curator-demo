@@ -15,7 +15,6 @@ import org.slf4j.Logger;
 
 import java.nio.file.InvalidPathException;
 import java.nio.file.Path;
-import java.util.Optional;
 
 import static nl.ulso.curator.CuratorModule.WATCH_DOCUMENT_KEY;
 import static org.slf4j.LoggerFactory.getLogger;
@@ -87,13 +86,9 @@ abstract class DemoCuratorModule
     @Provides
     static AlfredSettings alfredSettings()
     {
-        return new AlfredSettings(
-            Optional.of(PROJECT_FOLDER),
-            Optional.empty(),
-            Optional.empty(),
-            Optional.empty(),
-            Optional.empty()
-        );
+        return AlfredSettings.builder()
+            .projectsPath(PROJECT_FOLDER)
+            .build();
     }
 
     @Provides
