@@ -132,14 +132,14 @@ graph LR
     Daily --> ProjectLastModifiedAttributeValueProducer
     ProjectLastModifiedAttributeValueProducer@{ shape: subproc }
     ProjectLeadAttributeValueProducer --> ProjectAttributeValue
-    Project --> ProjectLeadAttributeValueProducer
-    Daily --> ProjectLeadAttributeValueProducer
     ProjectLeadMarker --> ProjectLeadAttributeValueProducer
+    Daily --> ProjectLeadAttributeValueProducer
+    Project --> ProjectLeadAttributeValueProducer
     ProjectLeadAttributeValueProducer@{ shape: subproc }
     ProjectStatusAttributeValueProducer --> ProjectAttributeValue
-    ProjectStatusMarker --> ProjectStatusAttributeValueProducer
-    Project --> ProjectStatusAttributeValueProducer
     Daily --> ProjectStatusAttributeValueProducer
+    Project --> ProjectStatusAttributeValueProducer
+    ProjectStatusMarker --> ProjectStatusAttributeValueProducer
     ProjectStatusAttributeValueProducer@{ shape: subproc }
     ProjectAttributeRepository --> ProjectAttributeRepositoryUpdate
     Project --> ProjectAttributeRepository
@@ -149,4 +149,4 @@ graph LR
     ProjectAttributeValue --> ProjectAttributeValueFrontMatterWriter
     ProjectAttributeValueFrontMatterWriter@{ shape: subproc }
 ```
-<!--/query (df8b911b)-->
+<!--/query (1ca1e326)-->

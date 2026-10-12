@@ -5,6 +5,7 @@ import dagger.Provides;
 import jakarta.inject.Named;
 import nl.ulso.curator.CuratorModule;
 import nl.ulso.curator.addon.alfred.AlfredModule;
+import nl.ulso.curator.addon.alfred.AlfredSettings;
 import nl.ulso.curator.addon.journal.JournalSettings;
 import nl.ulso.curator.addon.omnifocus.OmniFocusModule;
 import nl.ulso.curator.addon.omnifocus.OmniFocusSettings;
@@ -14,6 +15,7 @@ import org.slf4j.Logger;
 
 import java.nio.file.InvalidPathException;
 import java.nio.file.Path;
+import java.util.Optional;
 
 import static nl.ulso.curator.CuratorModule.WATCH_DOCUMENT_KEY;
 import static org.slf4j.LoggerFactory.getLogger;
@@ -35,7 +37,7 @@ import static org.slf4j.LoggerFactory.getLogger;
 @Module(includes = {
     CuratorModule.class,
     AlfredModule.class,
-//    OmniFocusModule.class,
+    //    OmniFocusModule.class,
 })
 abstract class DemoCuratorModule
 {
@@ -79,6 +81,18 @@ abstract class DemoCuratorModule
             MARKER_SUB_FOLDER,
             ACTIVITIES_SECTION,
             PROJECT_FOLDER
+        );
+    }
+
+    @Provides
+    static AlfredSettings alfredSettings()
+    {
+        return new AlfredSettings(
+            Optional.of(PROJECT_FOLDER),
+            Optional.empty(),
+            Optional.empty(),
+            Optional.empty(),
+            Optional.empty()
         );
     }
 
