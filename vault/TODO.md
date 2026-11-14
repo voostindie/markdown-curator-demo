@@ -10,7 +10,7 @@ While hammering away on in my log during the day, I refer to this note from time
 
 ## OmniFocus sync
 
-If you use OmniFocus and have enabled the `OmniFocusModule` in the demo curator, then you can also use the `omnifocus` query. Create an empty folder called`Demo` in OmniFocus, unindent the block below and watch what happens:
+If you use OmniFocus and have enabled the `omnifocus` extension in the demo curator, then you can also use the `omnifocus` query. Create an empty folder called`Demo` in OmniFocus, unindent the block below and watch what happens:
 
 	<!--query:omnifocus-->
 	<!--/query-->

@@ -4,11 +4,6 @@ import dagger.Module;
 import dagger.Provides;
 import jakarta.inject.Named;
 import nl.ulso.curator.CuratorModule;
-import nl.ulso.curator.addon.alfred.AlfredExtensionModule;
-import nl.ulso.curator.addon.journal.JournalExtensionModule;
-import nl.ulso.curator.addon.omnifocus.OmniFocusExtensionModule;
-import nl.ulso.curator.addon.project.ProjectExtensionModule;
-import nl.ulso.curator.addon.projectjournal.ProjectJournalExtensionModule;
 import org.slf4j.Logger;
 
 import java.nio.file.InvalidPathException;
@@ -27,14 +22,7 @@ import static org.slf4j.LoggerFactory.getLogger;
 /// By including several extensions, the curator becomes more powerful, offering more services.
 /// Extensions must be enabled and (optionally) configured before they are active. This is done by
 /// providing a configuration document in the vault, with a front-matter configuration.
-@Module(includes = {
-    CuratorModule.class,
-    JournalExtensionModule.class,
-    ProjectExtensionModule.class,
-    ProjectJournalExtensionModule.class,
-    OmniFocusExtensionModule.class,
-    AlfredExtensionModule.class,
-})
+@Module(includes = {CuratorModule.class})
 abstract class DemoCuratorModule
 {
     private static final Logger LOGGER = getLogger(DemoCuratorModule.class);

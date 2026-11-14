@@ -78,7 +78,7 @@ The project [[The do's and don't of note-keeping]] doesn't have any markers in t
 The `Prio` column is also empty. There's two ways to fix that:
 
 1. Define it in the `priority` property of the project note, in the front matter.
-2. If you use [OmniFocus](https://www.omnigroup.com/omnifocus): enable the `OmniFocusModule` in the demo curator and configure it. From then on priorities will be pulled from there, every 5 minutes.
+2. If you use [OmniFocus](https://www.omnigroup.com/omnifocus): enable the `omnnifocus` extension the demo curator and configure it. From then on priorities will be pulled from there, every 5 minutes.
 
 ## Do's and don'ts
 
