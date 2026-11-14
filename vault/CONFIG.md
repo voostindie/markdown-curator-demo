@@ -1,4 +1,8 @@
----
+This note enables and configures the extensions used by the [[Markdown Curator]] that is monitoring this vault. The curator is completely dynamic: change the configuration here, wait a few seconds, and watch the new configuration become active. No restarts required.
+
+Here's the configuration:
+
+```yaml
 extensions:
     project:
         folder: Projects
@@ -10,8 +14,7 @@ extensions:
     projectjournal:
     alfred:
         projects-path: Projects
----
-This note enables and configures the extensions used by the [[Markdown Curator]] that is monitoring this vault. The curator is completely dynamic: change the configuration here, wait a few seconds, and watch the new configuration become active. No restarts required.
+```
 
 Here's the list of available extensions and their current status:
 
@@ -22,7 +25,7 @@ Here's the list of available extensions and their current status:
 - 🟢 **journal**: Journal extracted from daily notes, with markers, timelines and navigation.
     - provides: Journal
     - settings: activities-section, folder, markers-folder, projects-folder
-- ⚪️ **omnifocus**: Compares projects in the vault with projects in OmniFocus.
+- ⚪️️ **omnifocus**: Compares projects in the vault with projects in OmniFocus.
     - requires: ProjectRepository
     - settings: exclude, exclude-prefixes, folder
 - 🟢 **project**: Projects, one document per project, with pluggable attributes.
@@ -30,7 +33,7 @@ Here's the list of available extensions and their current status:
     - settings: folder
 - 🟢 **projectjournal**: Resolves the lead, status and last modification date of projects from the journal.
     - requires: Journal, ProjectRepository
-<!--/query (8701dd32)-->
+<!--/query (b1bf3401)-->
 
 Legend:
 
