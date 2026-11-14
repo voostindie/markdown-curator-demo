@@ -152,7 +152,7 @@ Below is a reference to a non-existent query `name`, which means its output is r
 Queries available in this vault are:
 
 - **alfred**: Output settings for the Alfred workflow
-- **configuration**: Shows the curator settings, all available extensions with their status and dependencies, and all available queries.
+- **configuration**: Shows the curator settings, all available extensions with their status and dependencies, and all available queries and output formats.
 - **daynav**: Generates calendar navigation in the daily journal
 - **export**: Exports a document to vanilla Markdown.
 - **help**: Shows detailed help information for a query.
@@ -173,7 +173,7 @@ Queries available in this vault are:
 - **weeknav**: Generates calendar navigation in the weekly journal
 
 Use the 'help' query to get more information on a specific query.
-<!--/query (14724213)-->
+<!--/query (a9c9deab)-->
 ## Timeline
 
 Here are all the references to this README from the journal, in reverse chronological order:

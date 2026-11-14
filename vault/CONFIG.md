@@ -20,7 +20,7 @@ extensions:
 
 The delay and locale shown above have their default values; you can leave them out.
 
-Here's the active configuration, including the status for each of the available extensions, as well as the list of available queries:
+Here's the active configuration, including the status for each of the available extensions, the list of available queries, and the available output formats.
 
 <!--query:configuration-->
 ### Settings
@@ -63,7 +63,7 @@ Here's the active configuration, including the status for each of the available 
 ### Queries
 
 - **alfred**: Output settings for the Alfred workflow
-- **configuration**: Shows the curator settings, all available extensions with their status and dependencies, and all available queries.
+- **configuration**: Shows the curator settings, all available extensions with their status and dependencies, and all available queries and output formats.
 - **daynav**: Generates calendar navigation in the daily journal
 - **export**: Exports a document to vanilla Markdown.
 - **help**: Shows detailed help information for a query.
@@ -82,7 +82,12 @@ Here's the active configuration, including the status for each of the available 
 - **toc**: Outputs a table of contents for the current document.
 - **weekly**: Generates a weekly overview of activities, extracted from the journal
 - **weeknav**: Generates calendar navigation in the weekly journal
-<!--/query (b1eff83c)-->
+
+### Output formats
+
+- **json**: `application/json`, fenced
+- **markdown**: `text/markdown`, inline
+<!--/query (edf0254b)-->
 
 Legend:
 
