@@ -4,18 +4,17 @@ import dagger.Module;
 import dagger.Provides;
 import jakarta.inject.Named;
 import nl.ulso.curator.CuratorModule;
-import nl.ulso.curator.addon.alfred.AlfredModule;
-import nl.ulso.curator.addon.alfred.AlfredSettings;
-import nl.ulso.curator.addon.journal.JournalSettings;
-import nl.ulso.curator.addon.omnifocus.OmniFocusModule;
-import nl.ulso.curator.addon.omnifocus.OmniFocusSettings;
-import nl.ulso.curator.addon.project.ProjectSettings;
-import nl.ulso.curator.addon.projectjournal.ProjectJournalModule;
+import nl.ulso.curator.addon.alfred.AlfredExtensionModule;
+import nl.ulso.curator.addon.journal.JournalExtensionModule;
+import nl.ulso.curator.addon.omnifocus.OmniFocusExtensionModule;
+import nl.ulso.curator.addon.project.ProjectExtensionModule;
+import nl.ulso.curator.addon.projectjournal.ProjectJournalExtensionModule;
 import org.slf4j.Logger;
 
 import java.nio.file.InvalidPathException;
 import java.nio.file.Path;
 
+import static nl.ulso.curator.CuratorModule.CONFIGURATION_DOCUMENT_KEY;
 import static nl.ulso.curator.CuratorModule.WATCH_DOCUMENT_KEY;
 import static org.slf4j.LoggerFactory.getLogger;
 
@@ -25,18 +24,16 @@ import static org.slf4j.LoggerFactory.getLogger;
 /// provided: the path to the vault on disk. With just that, the curator works. The number of
 /// queries provided is limited, however.
 ///
-/// By including the [ProjectJournalModule], this module needs to provide a [ProjectSettings] and a
-/// [JournalSettings].
-///
-/// If you have OmniFocus installed, you can include the [OmniFocusModule] too. Make sure it has a
-/// folder called `Demo` to begin with.
-///
-/// All the other methods in this curator are only present to correctly read the path to the vault
-/// from the environment.
+/// By including several extensions, the curator becomes more powerful, offering more services.
+/// Extensions must be enabled and (optionally) configured before they are active. This is done by
+/// providing a configuration document in the vault, with a front-matter configuration.
 @Module(includes = {
     CuratorModule.class,
-    AlfredModule.class,
-    //    OmniFocusModule.class,
+    JournalExtensionModule.class,
+    ProjectExtensionModule.class,
+    ProjectJournalExtensionModule.class,
+    OmniFocusExtensionModule.class,
+    AlfredExtensionModule.class,
 })
 abstract class DemoCuratorModule
 {
@@ -44,11 +41,7 @@ abstract class DemoCuratorModule
 
     private static final String VAULT_PATH_ENVIRONMENT_VARIABLE = "VAULT_PATH";
     private static final String WATCH_DOCUMENT = "WATCHDOC";
-    private static final String JOURNAL_FOLDER = "Journal";
-    private static final String ACTIVITIES_SECTION = "Activities";
-    private static final String MARKER_SUB_FOLDER = "Markers";
-    private static final String PROJECT_FOLDER = "Projects";
-    private static final String OMNIFOCUS_FOLDER = "Demo";
+    private static final String CONFIG_DOCUMENT = "CONFIG";
 
     @Provides
     static Path vaultPath()
@@ -67,34 +60,10 @@ abstract class DemoCuratorModule
     }
 
     @Provides
-    static ProjectSettings projectSettings()
+    @Named(CONFIGURATION_DOCUMENT_KEY)
+    static String configDocument()
     {
-        return new ProjectSettings(PROJECT_FOLDER);
-    }
-
-    @Provides
-    static JournalSettings journalSettings()
-    {
-        return new JournalSettings(
-            JOURNAL_FOLDER,
-            MARKER_SUB_FOLDER,
-            ACTIVITIES_SECTION,
-            PROJECT_FOLDER
-        );
-    }
-
-    @Provides
-    static AlfredSettings alfredSettings()
-    {
-        return AlfredSettings.builder()
-            .projectsPath(PROJECT_FOLDER)
-            .build();
-    }
-
-    @Provides
-    static OmniFocusSettings omniFocusSettings()
-    {
-        return new OmniFocusSettings(OMNIFOCUS_FOLDER);
+        return CONFIG_DOCUMENT;
     }
 
     private static String resolveVaultPathFromEnvironmentVariable()

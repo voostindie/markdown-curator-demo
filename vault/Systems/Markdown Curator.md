@@ -36,8 +36,10 @@ At application startup, the system orders the available processors consistently 
 <!--query:processorGraph orientation: tb -->
 ```mermaid
 graph TB
-    VaultReloader ==> VaultInitializer
+    VaultReloader ==> ExtensionLoader
     VaultReloader@{ shape: subproc }
+    ExtensionLoader ==> VaultInitializer
+    ExtensionLoader@{ shape: subproc }
     VaultInitializer ==> DailyProducer
     VaultInitializer@{ shape: subproc }
     DailyProducer ==> DailyRepository
@@ -77,7 +79,7 @@ graph TB
     ProjectAttributeRepository ==> ProjectAttributeValueFrontMatterWriter
     ProjectAttributeRepository@{ shape: subproc }
 ```
-<!--/query (71330a2f)-->
+<!--/query (15ee364d)-->
 ## Producers and Consumers
 
 The following diagram shows processors combined with the payloads that processor consume and produce. The resulting diagram is a directed graph that has no cycles except for one: the `VaultReloader` is a special case that is automatically inserted at the front of the list. (I will explain that some other time.)
@@ -88,6 +90,10 @@ graph LR
     VaultReloader --> Reset
     Document --> VaultReloader
     VaultReloader@{ shape: subproc }
+    ExtensionLoader --> Reset
+    Document --> ExtensionLoader
+    Reset --> ExtensionLoader
+    ExtensionLoader@{ shape: subproc }
     VaultInitializer --> Document
     VaultInitializer --> Folder
     Reset --> VaultInitializer
@@ -149,4 +155,4 @@ graph LR
     ProjectAttributeValue --> ProjectAttributeValueFrontMatterWriter
     ProjectAttributeValueFrontMatterWriter@{ shape: subproc }
 ```
-<!--/query (8c1260f9)-->
+<!--/query (585efa7b)-->

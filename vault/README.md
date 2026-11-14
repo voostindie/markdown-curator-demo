@@ -154,6 +154,7 @@ Queries available in this vault are:
 - **alfred**: Output settings for the Alfred workflow
 - **daynav**: Generates calendar navigation in the daily journal
 - **export**: Exports a document to vanilla Markdown.
+- **extensions**: Lists all available extensions, their status and their dependencies.
 - **help**: Shows detailed help information for a query.
 - **latestnav**: Generates a link to the latest journal entry
 - **links**: Gathers all external links for a document, for use in the HTTP server only.
@@ -172,7 +173,7 @@ Queries available in this vault are:
 - **weeknav**: Generates calendar navigation in the weekly journal
 
 Use the 'help' query to get more information on a specific query.
-<!--/query (75c02a0b)-->
+<!--/query (f63fb871)-->
 ## Timeline
 
 Here are all the references to this README from the journal, in reverse chronological order:
