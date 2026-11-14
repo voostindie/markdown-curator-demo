@@ -50,6 +50,7 @@ Here's the active configuration, including the status for each of the available 
 - ⚪️️**omnifocus**: Compares projects in the vault with projects in OmniFocus.
     - requires: ProjectRepository
     - settings:
+        - `database`: Path to the OmniFocus database; defaults to the OmniFocus 4 location.
         - `exclude`: List of names of OmniFocus projects to ignore.
         - `exclude-prefixes`: List of prefixes of OmniFocus projects to ignore.
         - `folder`: Folder in OmniFocus with the projects; required.
@@ -87,7 +88,7 @@ Here's the active configuration, including the status for each of the available 
 
 - **json**: `application/json`, fenced
 - **markdown**: `text/markdown`, inline
-<!--/query (edf0254b)-->
+<!--/query (7a6622e1)-->
 
 Legend:
 
