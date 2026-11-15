@@ -6,13 +6,14 @@ Here's the configuration:
 delay: 3
 locale: en-US
 extensions:
-    project:
-        folder: Projects
     journal:
         folder: Journal
         markers-folder: Markers
         activities-section: Activities
         projects-folder: Projects
+    backlinks:
+    project:
+        folder: Projects
     projectjournal:
     alfred:
         projects-path: Projects
